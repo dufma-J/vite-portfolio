@@ -1,0 +1,128 @@
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.header_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(15px);
+    padding: 1rem;
+}
+
+.header_logo {
+    font-size: .9rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.header_logo em {
+    display: block;
+    font-size: 10px;
+    color: var(--black200);
+}
+
+.header_nav li {
+    display: inline-block;
+}
+
+.header_nav li a {
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 14px;
+    position: relative;
+}
+
+.header_nav li a:before {
+    content: '';
+    position: absolute;
+    left: 14px;
+    bottom: 10px;
+    transform: scaleX(0);
+    width: calc(100% - 28px);
+    height: 1px;
+    background-color: var(--black);
+    transition: 0.35s;
+}
+
+.header_nav li a:hover::before {
+    transform: scaleX(1);
+}
+
+.header_nav_mobile {
+    display: none;
+    cursor: pointer;
+}
+
+.header_nav_mobile span {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: var(--black);
+    margin-top: 20px;
+}
+
+.header_nav_mobile span::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: var(--black);
+    right: 0;
+    top: 6px;
+    transition: 0.35s;
+}
+
+.header_nav_mobile span::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: var(--black);
+    right: 0;
+    bottom: 6px;
+    transition: 0.35s;
+}
+
+/* ----------------------------------- */
+@media screen and (max-width:768px) {
+    .header_nav {
+        position: absolute;
+        right: -143px;
+        top: 0;
+        text-align: right;
+        border: 1px solid #000;
+        transition: 0.35s;
+    }
+
+    .header_nav ul {
+        background-color: rgba(255, 255, 255, .1);
+        position: absolute;
+        right: 0px;
+        z-index: 100;
+        top: 64px;
+        padding: 0 20px;
+    }
+
+    .header_nav.show {
+        right: 0;
+    }
+
+    .header_nav_mobile {
+        display: block;
+    }
+
+    .header_nav.show+.header_nav_mobile span::before {
+        width: 20px;
+    }
+
+    .header_nav.show+.header_nav_mobile span::after {
+        width: 20px;
+    }
+}

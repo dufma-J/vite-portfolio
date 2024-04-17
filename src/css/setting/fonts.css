@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&display=swap');
+@import url('https://websfont.github.io/gmarket/gmarket.css');
+
+.nanum {
+    font-family: "Nanum Gothic";
+}
+
+.nanumC {
+    font-family: "Nanum Gothic Coding";
+}
+
+.gmarket {
+    font-family: "gmarket";
+}
