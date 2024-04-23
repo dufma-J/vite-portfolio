@@ -1,0 +1,125 @@
+.graphics_inner {
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--black);
+}
+
+.graphic_title em {
+    position: relative;
+    top: -10px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 2;
+}
+
+.graphic_title {
+    position: sticky;
+    top: 70px;
+    width: 100%;
+    height: 5vw;
+    font-size: 4vw;
+    font-weight: 900;
+    line-height: 1.6;
+    font-family: var(--mainKor-font);
+    text-transform: uppercase;
+    color: var(--white);
+    border-bottom: .4vw solid var(--white);
+    margin-bottom: 100px;
+}
+
+.graphics_wrap {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.graphics_item {
+    width: 45%;
+    margin-top: 200px;
+}
+
+.graphics_item:nth-child(even) {
+    margin-top: 0px;
+}
+
+.graphics_item img {
+    width: 100%;
+}
+
+.graphics_item .img_box {
+    position: relative;
+}
+
+.graphics_item .img_box::before {
+    content: '';
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: url(../../img/arrow.png) no-repeat center;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    z-index: 10;
+    transition: 0.35s;
+    opacity: 0;
+}
+
+.graphics_item .img_box::after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: url(../../img/round.png) no-repeat center;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+
+    animation: spanAni 10s infinite linear;
+}
+
+.graphics_item:hover .img_box::after {
+    opacity: 1;
+}
+
+.graphics_item:hover .img_box::before {
+    opacity: 1;
+}
+
+.graphics_item .img_box img {
+    filter: brightness(50%);
+}
+
+.graphics_item:hover .img_box img {
+    filter: brightness(100%);
+}
+
+@keyframes spanAni {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@media screen and (max-width:768px) {
+    .graphic_title {
+        width: 100%;
+        margin-bottom: 10vw;
+        font-size: 30px;
+        height: auto;
+        top: 68px;
+        z-index: 999;
+        background-color: var(--black);
+    }
+}

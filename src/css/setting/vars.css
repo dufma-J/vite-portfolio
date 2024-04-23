@@ -1,14 +1,14 @@
 :root {
     --mainEng-font: "Nanum Gothic";
-    --mainKor-font: "Nanum Gothic Coding";
+    --mainKor-font: "Noto Sans KR";
     --mainNum-font: "gmarket";
 
     --mainBg-color: #F6F6F6;
-    --subBg100: #CEDEF2;
-    --subBg200: #B4C4D9;
-    --subBg300: #99AABF;
-    --subBg400: #8090A6;
-    --subBg500: #68788C;
+    --subBg100: #A6BEE0;
+    --subBg200: #E8E8E3;
+    --subBg300: #7E8BB1;
+    --subBg400: #889FC4;
+    --subBg500: #E2E1DE;
 
     --white: #ffffff;
     --black: #000000;

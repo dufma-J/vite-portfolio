@@ -53,12 +53,12 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 466px;
-    height: 466px;
+    width: 248px;
+    height: 256px;
     overflow: hidden;
     /* filter: grayscale(100%); */
     opacity: 0;
-    background: url(../../img/sun.png);
+    background: url(../../img/moon.png);
     background-repeat: no-repeat;
     /* background-position: 0 center; */
     /* background-size: contain; */

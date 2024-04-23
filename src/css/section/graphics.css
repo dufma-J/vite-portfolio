@@ -1,0 +1,157 @@
+.graphics_inner {
+    padding: 16px;
+    background-color: var(--black);
+}
+
+.graphic_title em {
+    position: relative;
+    top: -10px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 2;
+}
+
+.graphic_title {
+    position: sticky;
+    top: 70px;
+    width: 100%;
+    height: 5vw;
+    font-size: 4vw;
+    font-weight: 900;
+    line-height: 1.6;
+    font-family: var(--mainKor-font);
+    text-transform: uppercase;
+    color: var(--white);
+    border-bottom: .4vw solid var(--white);
+    margin-bottom: 100px;
+}
+
+.graphics_wrap {
+    width: 80%;
+    margin: auto;
+}
+
+.graphics_wrap img {
+    width: 100%;
+    /* filter: brightness(50%);
+    transition: 0.35s; */
+}
+
+/* .graphics_wrap .img_box:hover img {
+    filter: brightness(100%);
+} */
+
+.graphics_wrap .stage1 .inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.graphics_wrap .stage1 .img_box {
+    width: 60%;
+}
+
+.graphics_wrap .stage1 .img_text {
+    width: 35%;
+}
+
+.graphics_wrap .stage1 .img_text h3 {
+    color: var(--subBg100);
+    font-weight: 500;
+    font-size: 4vw;
+    font-family: var(--mainKor-font);
+}
+
+.graphics_wrap .stage1 .img_text p {
+    line-height: 1.6;
+    color: var(--white);
+}
+
+.graphics_wrap .stage2 {
+    padding: 10% 0;
+}
+
+.graphics_wrap .stage2 ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.graphics_wrap .stage2 ul li {
+    width: 28%;
+}
+
+.graphics_wrap .stage2 .img_text {
+    color: var(--white);
+}
+
+.graphics_wrap .stage2 .img_text.size {
+    position: relative;
+    /* margin-top: 100px; */
+}
+
+.graphics_wrap .stage2 .img_text .title1 {
+    font-size: 3vw;
+    -webkit-text-stroke: 1px var(--subBg100);
+    margin-bottom: 50px;
+    color: transparent;
+}
+
+.graphics_wrap .stage2 .img_text .title2 {
+    font-size: 1.5vw;
+}
+
+.graphics_wrap .stage2 ul.size li:nth-child(1) {
+    width: 55%;
+    margin-left: 10%;
+}
+
+.img_box {
+    position: relative;
+    overflow: hidden;
+    transition: 0.35s;
+}
+
+.img_box::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: var(--subBg100);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    transition: 0.35s;
+    transition-delay: 0.35s;
+}
+
+.img_box::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    transition: 0.35s;
+}
+
+.img_box.active::before {
+    height: 0;
+}
+
+.img_box.active::after {
+    height: 0;
+}
+
+.img_text {
+    position: relative;
+    top: 50px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.img_text.active {
+    top: 0px;
+    opacity: 1;
+}

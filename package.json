@@ -12,6 +12,8 @@
     "vite": "^5.2.0"
   },
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
+    "@studio-freight/lenis": "^1.0.42",
     "gsap": "^3.12.5"
   }
 }
