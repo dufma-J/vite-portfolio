@@ -5,11 +5,12 @@ new Splide('#splide2').mount();
 new Splide('#splide3').mount();
 
 export function splide() {
-    const ltlElems = document.querySelectorAll('.ltl')
-    const rtlElems = document.querySelectorAll('.rtl')
+    const carouselElementsLtl = document.querySelectorAll(".ltl");
+    // const carouselElementsrtl = document.querySelectorAll(".rtl");
 
-    ltlElems.forEach(ltlElem => {
-        const splide = new Splide(ltlElem, {
+    carouselElementsLtl.forEach((carouselElement) => {
+        const splide = new Splide(carouselElement, {
+
             type: "loop",
             drag: true,
             autoWidth: true,
@@ -18,9 +19,29 @@ export function splide() {
             arrows: false,
             autoScroll: {
                 speed: 1.5,
-                pauseOnHover: true
-            }
-        })
-        splide.mount(window.splide.Extensions)
-    })
+                pauseOnHover: false,
+            },
+        });
+
+        splide.mount(window.splide.Extensions);
+    });
+    carouselElementsrtl.forEach((carouselElement) => {
+        const splide = new Splide(carouselElement, {
+            direction: 'rtl',
+            type: "loop",
+            drag: true,
+            autoWidth: true,
+            gap: 30,
+            pagination: false,
+            arrows: false,
+            autoScroll: {
+                speed: 1.5,
+                pauseOnHover: false,
+            },
+        });
+
+        splide.mount(window.splide.Extensions);
+    });
 }
+
+

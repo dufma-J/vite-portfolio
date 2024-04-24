@@ -1,7 +1,6 @@
 .i_am {
     position: relative;
     height: 100vh;
-    border: 1px solid #000;
     align-items: center;
     justify-content: center;
     gap: 5vw;
@@ -9,10 +8,6 @@
 
 .splide {
     width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .splide .splide__track ul li {
@@ -25,26 +20,30 @@
     font-family: var(--mainKor-font);
 }
 
+.splide__list{
+    display: flex;
+    gap: 30px;
+}
+
 .splide.ltl li img {
     width: 5vw;
     height: 5vw;
 }
 
 .splide .splide__track-1 ul li {
-    -webkit-text-stroke: 1px var(--subBg500);
-    color: transparent;
+    color: var(--subBg300);
 }
 
-.splide .splide__track-2{
+.splide .splide__track-2 {
     rotate: 2deg;
 }
 
-.splide.rtl ul li img{
+.splide.rtl ul li img {
     height: 20vw;
 }
 
-.splide .splide__track-3{
-    background: var(--subBg500);
+.splide .splide__track-3 {
+    background: var(--subBg300);
     rotate: -2deg;
     color: #fff;
 }
